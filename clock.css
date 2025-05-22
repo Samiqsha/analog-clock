@@ -1,0 +1,67 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: #9cc7ae; /* Solid black to eliminate gradient bleed */
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+#clockContainer {
+    position: relative;
+    height: 40vw;
+    width: 40vw;
+    max-width: 400px;
+    max-height: 400px;
+    border: 8px solid rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    background: black;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.6);
+    overflow: hidden;
+}
+
+/* Inner dial to fix corners */
+.dial {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+    background: url('projectimage.jpg') no-repeat center;
+    background-size: cover;
+    z-index: 0;
+}
+
+#hour, #minute, #second {
+    position: absolute;
+    border-radius: 10px;
+    transform-origin: bottom;
+    opacity: 0.9;
+    z-index: 1;
+}
+#hour {
+    width: 2%;
+    height: 25%;
+    top: 25%;
+    left: 49%;
+    background:#e9bbd2; /* New dark blue */
+}
+
+#minute {
+    width: 1.5%;
+    height: 30%;
+    top: 20%;
+    left: 49.25%;
+    background: #69143d; /* New teal */
+}
+
+#second {
+    width: 1%;
+    height: 40%;
+    top: 10%;
+    left: 49.5%;
+    background: #e84393; /* New bright pink */
+}
